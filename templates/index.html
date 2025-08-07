@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Pedro Kraide - Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/variables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/timeline.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contacts.css') }}">
+</head>
+
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav>
+                <div class="logo"><img src="{{ url_for('static', filename='imgs/bege.png') }}" alt="bege-logo"></div>
+                <ul class="nav-links">
+                    <li><a href="#hero">HOME</a></li>
+                    <li><a href="#about-section">SOBRE MIM</a></li>
+                    <li><a href="#projects-section">PROJETOS</a></li>
+                    <li><a href="#contacts-section">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>JOÃO KRAIDE</h1>
+                <p>Aluno de Engenharia de Software</p>
+                <a href="#projects-section" class="btn">Ver Projetos</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">HABILIDADES PRINCIPAIS</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>HTML/CSS, Python, Java, C#, SQL</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Computing</h3>
+                    <p>Azure, Deploy, Pipelines, Web Apps</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Data Science</h3>
+                    <p>Machine Learning, Análise de Dados</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Metodologias Ágeis</h3>
+                    <p>SCRUM, DevOps</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="about-section" id="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='imgs/eu.png') }}" alt="joao-kraide">
+                </div>
+                <div class="about-text">
+                    <h2>SOBRE MIM</h2>
+                    <p>Sou aluno do curso de Engenharia de Software na FIAP, atualmente no segundo ano, e já formado em Análise e Desenvolvimento de Sistemas. Possuo conhecimento tanto em front-end quanto em back-end, com experiência em metodologias ágeis como SCRUM e práticas de DevOps.</p>
+                    <p>Tenho conhecimento em Windows e Linux (básico), além de experiência com Deploy, Pipelines, Web Apps e Banco de Dados em ambiente cloud (Azure). Estou sempre buscando adquirir mais competências relevantes para a área e diversificar meu conjunto de habilidades.</p>
+                    <p>Minhas áreas de maior interesse e desempenho acadêmico incluem QA, Machine Learning, Data Science e DevOps, nas quais já participei de diversos projetos universitários.</p>
+                    <a href="/contact" class="btn">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education-section">
+        <div class="container">
+            <h2 class="section-title">FORMAÇÃO ACADÊMICA</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2023 - 2025</h3>
+                        <p>Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
+                        <p>FIAP</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2025 - 2027</h3>
+                        <p>Bacharelado em Engenharia de Software</p>
+                        <p>FIAP (Atual 4° semestre)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">HABILIDADES TÉCNICAS</h2>
+            <div class="skills-grid2">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML/CSS</h3>
+                    <p>Experiente</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Intermediário</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <p>Intermediário</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-microsoft"></i>
+                    <h3>C#</h3>
+                    <p>Iniciante</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <p>Intermediário</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Azure</h3>
+                    <p>Cloud Computing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="projects-section" id="projects-section">
+        <div class="container">
+            <h2 class="section-title">MEUS PROJETOS</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="FireGuard">
+                    </div>
+                    <div class="project-content">
+                        <h3>FireGuard</h3>
+                        <p>Projeto acadêmico que estuda áreas com riscos de incêndio em florestas e metrópoles, utilizando sensores para monitoramento e alerta às autoridades.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Data Science</span>
+                            <span class="tech-tag">Modelagem 3D</span>
+                            <span class="tech-tag">Infraestrutura de Rede</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/JoaoKraideM/FIREGUARD-AR-VR" target="_blank">
+                                <i class="fab fa-github"></i> Ver no GitHub Modelagem
+                            </a>
+                            <a href="https://github.com/JoaoKraideM/FIREGUARD-DataScience" target="_blank">
+                                <i class="fab fa-github"></i> Ver no GitHub DataScience
+                            </a>
+                            <a href="https://github.com/JoaoKraideM/FIREGUARD-Redes" target="_blank">
+                                <i class="fab fa-github"></i> Ver no GitHub Redes
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=3JcaYc0lPOg&t=1s" target="_blank">
+                                <i class="fab fa-youtube"></i> Ver Vídeo Pitch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='imgs/pexels-itslauravillela-33327682.jpg') }}" alt="Sprint-Dasa">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sprint DASA</h3>
+                        <p>Sistema de gerenciamento de estoque hospitalar que automatiza a contagem e reposição de utensílios médicos, evitando faltas de produtos essenciais.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Data Science</span>
+                            <span class="tech-tag">Infraestrutura de Redes</span>
+                            <span class="tech-tag">Modelagem 3D</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/JoaoKraideM/SprintData" target="_blank">
+                                <i class="fab fa-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Gestão Empresarial">
+                    </div>
+                    <div class="project-content">
+                        <h3>Suporte em Software de Gestão</h3>
+                        <p>Experiência profissional como suporte técnico em software de gestão empresarial, com responsabilidade pelo atendimento ao cliente e manutenção de tabelas em MySQL.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Suporte Técnico</span>
+                            <span class="tech-tag">Gestão Empresarial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='imgs/pexels-itslauravillela-33327682.jpg') }}" alt="Projeto em Andamento">
+                    </div>
+                    <div class="project-content">
+                        <h3>Meu Portifolio</h3>
+                        <p>Este portfólio foi desenvolvido para apresentar minhas habilidades e projetos. Ele é responsivo e utiliza HTML, CSS e JavaScript.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/JoaoKraideM/MeuSite" target="_blank">
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="contact-section" id="contacts-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Entre em Contato</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Localização</h3>
+                            <p>Osasco - SP, Brasil</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <a href="mailto:joao.kraide@gmail.com">joao.kraide@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-kraide-m%C3%A1ximo-ba0a89234/" target="_blank">João Pedro Kraide Máximo</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/JoaokraideM" target="_blank">JoaokraideM</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Mande uma Mensagem</h2>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/JoookraideM" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/joão-pedro-kraide-máximo" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:joao.kraide@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2024 João Pedro Kraide Máximo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de scroll suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

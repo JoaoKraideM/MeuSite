@@ -1,0 +1,21 @@
+:root {
+    --cinza: #343534;
+    --destaque-laranja: #e76e3c;
+    --fundo: #e4e2dd;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background: var(--fundo); 
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--destaque-laranja); 
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--fundo); 
+}
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--destaque-laranja) var(--fundo);
+}

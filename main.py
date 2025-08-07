@@ -4,8 +4,9 @@ from flask_socketio import SocketIO, emit
 
 # Configuração do Flask
 app = Flask(__name__)
-app.template_folder = 'Statics/templates'
-app.static_folder = 'Statics/imgs'
+app.template_folder = 'templates'
+app.static_folder = 'static'
+app.css_folder = 'static/css'
 
 # Importa as rotas do arquivo views.py
 from views import *
