@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - João Pedro Kraide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --verde-principal: #204917;
+            --verde-claro: #3a7d2e;
+            --verde-escuro: #143510;
+            --destaque-laranja: #e66b3b;
+            --fundo-claro: #f5f9f5;
+            --texto-escuro: #2a3329;
+            --texto-claro: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--texto-escuro);
+            line-height: 1.6;
+            background-color: var(--fundo-claro);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--verde-principal);
+            color: var(--texto-claro);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--texto-claro);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--texto-claro);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--destaque-laranja);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--destaque-laranja);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--destaque-laranja);
+            color: var(--texto-claro);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid var(--destaque-laranja);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--destaque-laranja);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        footer {
+            background-color: var(--verde-escuro);
+            color: var(--texto-claro);
+            text-align: center;
+            padding: 30px 0 20px;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: var(--texto-claro);
+            margin: 0 15px;
+            font-size: 22px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .social-links a:hover {
+            color: var(--destaque-laranja);
+            transform: translateY(-3px);
+        }
+        
+        /* Estilos Projects */
+        .projects-section {
+            padding: 120px 0 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            position: relative;
+            color: var(--verde-escuro);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--verde-principal), var(--destaque-laranja));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border-top: 3px solid var(--verde-principal);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--verde-escuro);
+        }
+        
+        .project-content p {
+            margin-bottom: 20px;
+            color: var(--texto-escuro);
+            line-height: 1.7;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-tag {
+            background-color: var(--verde-principal);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .project-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .project-links a {
+            color: var(--verde-principal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .project-links a:hover {
+            color: var(--destaque-laranja);
+            transform: translateX(5px);
+        }
+        
+        .project-links a i {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">João Pedro Kraide Máximo</div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">Sobre</a></li>
+                    <li><a href="/projects">Projetos</a></li>
+                    <li><a href="/contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="FireGuard">
+                    </div>
+                    <div class="project-content">
+                        <h3>FireGuard</h3>
+                        <p>Projeto acadêmico que estuda áreas com riscos de incêndio em florestas e metrópoles, utilizando sensores para monitoramento e alerta às autoridades.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Data Science</span>
+                            <span class="tech-tag">Modelagem 3D</span>
+                            <span class="tech-tag">Infraestrutura de Rede</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/JoaoKraideM/FIREGUARD-AR-VR" target="_blank">
+                                <i class="fab fa-github"></i> Ver no GitHub Modelagem
+                            </a>
+                            <a href="https://github.com/JoaoKraideM/FIREGUARD-DataScience" target="_blank">
+                                <i class="fab fa-github"></i> Ver no GitHub DataScience
+                            </a>
+                            <a href="https://github.com/JoaoKraideM/FIREGUARD-Redes" target="_blank">
+                                <i class="fab fa-github"></i> Ver no GitHub Redes
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=3JcaYc0lPOg&t=1s" target="_blank">
+                                <i class="fab fa-youtube"></i> Ver Vídeo Pitch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='pexels-itslauravillela-33327682.jpg') }}" alt="Sprint-Dasa">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sprint DASA</h3>
+                        <p>Sistema de gerenciamento de estoque hospitalar que automatiza a contagem e reposição de utensílios médicos, evitando faltas de produtos essenciais.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Data Science</span>
+                            <span class="tech-tag">Infraestrutura de Redes</span>
+                            <span class="tech-tag">Modelagem 3D</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/JoaoKraideM/SprintData" target="_blank">
+                                <i class="fab fa-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Gestão Empresarial">
+                    </div>
+                    <div class="project-content">
+                        <h3>Suporte em Software de Gestão</h3>
+                        <p>Experiência profissional como suporte técnico em software de gestão empresarial, com responsabilidade pelo atendimento ao cliente e manutenção de tabelas em MySQL.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Suporte Técnico</span>
+                            <span class="tech-tag">Gestão Empresarial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/JoaokraideM" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-kraide-m%C3%A1ximo-ba0a89234/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:joao.kraide@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2024 João Pedro Kraide Máximo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de scroll suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
