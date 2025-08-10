@@ -34,7 +34,7 @@ def enviar():
         msg['From'] = smtp_user
         msg['To'] = destinatario
         msg['Subject'] = f"{assunto} (De: {email_remetente})"
-        msg['Reply-To'] = email_remetente  # Para facilitar resposta direta ao visitante
+        msg['Reply-To'] = email_remetente  
 
         corpo = f"""
         Nova mensagem do formulário:
