@@ -6,7 +6,6 @@
     <title>João Pedro Kraide - Portfólio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/variables.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
@@ -14,10 +13,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/timeline.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/contacts.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/github.css') }}">
 </head>
 
 
 <body>
+    <!-- Header -->
     <header>
         <div class="header-container">
             <nav>
@@ -25,6 +26,7 @@
                 <ul class="nav-links">
                     <li><a href="#hero">HOME</a></li>
                     <li><a href="#about-section">SOBRE MIM</a></li>
+                    <li><a href="#experiencie-section">EXPERIÊNCIA PROFISSIONAL</a></li>
                     <li><a href="#projects-section">PROJETOS</a></li>
                     <li><a href="#contacts-section">CONTATO</a></li>
                 </ul>
@@ -45,8 +47,64 @@
             </div>
             </div>
         </div>
-    </section>
 
+
+            <!-- curriculos -->
+    <section class="download-section">
+        <div class="container">
+        <h2 class="section-title">BAIXE MEU CURRÍCULO</h2>
+            <div class="download-buttons">
+                <a href="/static/Curriculo.pdf" download class="download-btn">
+                    <i class="fas fa-file-download"></i> Baixar Currículo
+                </a>
+                <a href="/static/Resume.pdf" download class="download-btn">
+                    <i class="fas fa-file-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Gráfico de Contribuições do GitHub -->
+    <!--
+    <section class="github-contributions-section">
+        <div class="contributions-container">
+            <h2 class="section-title">Minhas Contribuições</h2>
+            
+            <div class="contributions-info">
+                <span id="contributions-count">5 contribuições em 2025</span>
+                <div class="months">
+                    <span>Jan</span>
+                    <span>Feb</span>
+                    <span>Mar</span>
+                    <span>Apr</span>
+                    <span>May</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Aug</span>
+                    <span>Sep</span>
+                    <span>Oct</span>
+                    <span>Nov</span>
+                    <span>Dec</span>
+                </div>
+            </div>
+            
+            <div class="contributions-grid" id="contributions-grid">
+            Células serão inseridas pelo JavaScript 
+            </div>
+            
+            <div class="contributions-legend">
+                <span>Less</span>
+                <div class="intensity-levels">
+                    <div class="intensity-level"></div>
+                    <div class="intensity-level"></div>
+                    <div class="intensity-level"></div>
+                    <div class="intensity-level"></div>
+                </div>
+                <span>More</span>
+            </div>
+        </div>
+    </section>
+    -->
+    <!-- Habilidades -->
     <section class="skills">
         <div class="container">
             <h2 class="section-title">HABILIDADES PRINCIPAIS</h2>
@@ -74,8 +132,8 @@
             </div>
         </div>
     </section>
-
-      <section class="about-section" id="about-section">
+    <!-- Sobre Mim -->
+    <section class="about-section" id="about-section">
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
@@ -86,12 +144,12 @@
                     <p>Sou aluno do curso de Engenharia de Software na FIAP, atualmente no segundo ano, e já formado em Análise e Desenvolvimento de Sistemas. Possuo conhecimento tanto em front-end quanto em back-end, com experiência em metodologias ágeis como SCRUM e práticas de DevOps.</p>
                     <p>Tenho conhecimento em Windows e Linux (básico), além de experiência com Deploy, Pipelines, Web Apps e Banco de Dados em ambiente cloud (Azure). Estou sempre buscando adquirir mais competências relevantes para a área e diversificar meu conjunto de habilidades.</p>
                     <p>Minhas áreas de maior interesse e desempenho acadêmico incluem QA, Machine Learning, Data Science e DevOps, nas quais já participei de diversos projetos universitários.</p>
-                    <a href="/contact" class="btn">Entre em Contato</a>
+                    <a href="#contacts-section" class="btn">Entre em Contato</a>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- Formação Acadêmica -->
     <section class="education-section">
         <div class="container">
             <h2 class="section-title">FORMAÇÃO ACADÊMICA</h2>
@@ -113,7 +171,7 @@
             </div>
         </div>
     </section>
-
+    <!-- Habilidades Técnicas -->
     <section class="skills-section">
         <div class="container">
             <h2 class="section-title">HABILIDADES TÉCNICAS</h2>
@@ -151,7 +209,34 @@
             </div>
         </div>
     </section>
-        <section class="projects-section" id="projects-section">
+    <!-- Experiência -->
+    <section class="experiencie-section" id="experiencie-section">
+        <div class="container">
+            <h2 class="section-title">EXPERIÊNCIA PROFISSIONAL</h2>
+            <div class="experiencie-grid">
+                <div class="experiencie-card">
+                    <div class="experiencie-image">
+                    </div>
+                    <div class="experiencie-content">
+                        <h3>Suporte em Software de Gestão</h3>
+                        <div class="experiencie-details">
+                            <span class="experiencie-company">Empresa de Tecnologia</span>
+                            <span class="experiencie-period">2022 - Presente</span>
+                        </div>
+                        <p>Experiência profissional como suporte técnico em software de gestão empresarial, com responsabilidade pelo atendimento ao cliente e manutenção de tabelas em MySQL.</p>
+                        <div class="experiencie-tech">
+                            <span class="tech-tag">Suporte Técnico</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Atendimento ao Cliente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Projetos -->
+    <section class="projects-section" id="projects-section">
         <div class="container">
             <h2 class="section-title">MEUS PROJETOS</h2>
             <div class="projects-grid">
@@ -204,20 +289,6 @@
                     </div>
                 </div>
                 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Gestão Empresarial">
-                    </div>
-                    <div class="project-content">
-                        <h3>Suporte em Software de Gestão</h3>
-                        <p>Experiência profissional como suporte técnico em software de gestão empresarial, com responsabilidade pelo atendimento ao cliente e manutenção de tabelas em MySQL.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Suporte Técnico</span>
-                            <span class="tech-tag">Gestão Empresarial</span>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="project-card">
                     <div class="project-image">
@@ -240,12 +311,12 @@
             </div>
         </div>
     </section>
-
-        <section class="contact-section" id="contacts-section">
+    <!-- contato -->
+    <section class="contact-section" id="contacts-section">
         <div class="container">
             <div class="contact-container">
                 <div class="contact-info">
-                    <h2>Entre em Contato</h2>
+                    <h2>Entre em Contato</h2>   
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -282,14 +353,20 @@
                             <a href="https://github.com/JoaokraideM" target="_blank">JoaokraideM</a>
                         </div>
                     </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>WhatsApp</h3>
+                            <a href="https://api.whatsapp.com/send?phone=5511942160869" target="_blank">+55 11 94216-0869</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="contact-form">
                     <h2>Mande uma Mensagem</h2>
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
+                    <form action="/enviar" method="POST">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
@@ -304,33 +381,34 @@
                         </div>
                         <button type="submit" class="submit-btn">Enviar Mensagem</button>
                     </form>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <ul class="flashes">
+                        {% for category, message in messages %}
+                            <li class="alert alert-{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% endwith %}
                 </div>
             </div>
         </div>
     </section>
-
-
+    <!-- footer -->
     <footer>
         <div class="container">
             <div class="social-links">
                 <a href="https://github.com/JoookraideM" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/joão-pedro-kraide-máximo" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:joao.kraide@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5511942160869" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p>&copy; 2024 João Pedro Kraide Máximo. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script>
-        // Efeito de scroll suave para links internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!--- Scripts --->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>
