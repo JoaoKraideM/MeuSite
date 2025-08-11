@@ -4,54 +4,18 @@
     --fundo: #e4e2dd;
 }
 
-/* Scrollbar para WebKit (Chrome, Safari, Edge) */
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 10px;
-    height: 10px; /* Para scrollbar horizontal */
+    background: var(--fundo); 
 }
-
-::-webkit-scrollbar-track {
-    background: var(--fundo);
+body::-webkit-scrollbar-thumb {
+    background: var(--destaque-laranja); 
     border-radius: 5px;
 }
-
-::-webkit-scrollbar-thumb {
-    background: var(--destaque-laranja);
-    border-radius: 5px;
-    border: 2px solid var(--fundo);
+body::-webkit-scrollbar-track {
+    background: var(--fundo); 
 }
-
-::-webkit-scrollbar-thumb:hover {
-    background: #d45a2c; /* Tom mais escuro para hover */
-}
-
-/* Scrollbar para Firefox */
-html {
+body {
     scrollbar-width: thin;
     scrollbar-color: var(--destaque-laranja) var(--fundo);
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    /* Scrollbar mais fina em dispositivos móveis */
-    ::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
-    }
-    
-    html {
-        scrollbar-width: thin;
-    }
-}
-
-/* Melhorias para dark mode (opcional) */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --cinza: #e4e2dd;
-        --fundo: #343534;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        border: 2px solid var(--cinza);
-    }
 }
