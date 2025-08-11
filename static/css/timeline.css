@@ -102,3 +102,64 @@
         text-align: left;
     }
 }
+/* Versão mobile */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+        transform: none;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 20px;
+        text-align: left;
+    }
+    
+    .timeline-item::after {
+        left: 9px;
+    }
+    
+    .left, 
+    .right {
+        left: 0;
+        padding-right: 0;
+        padding-left: 50px;
+        text-align: left;
+    }
+    
+    .left::after,
+    .right::after {
+        left: 9px;
+        right: auto;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+}
+
+/* Pequenos ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .timeline::after {
+        left: 15px;
+    }
+    
+    .timeline-item {
+        padding-left: 40px;
+    }
+    
+    .timeline-item::after {
+        left: 4px;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-date {
+        font-size: 0.75rem;
+    }
+}

@@ -154,3 +154,40 @@
         width: 100%;
     }
 }
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .contact-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 0 15px;
+    }
+    
+    .contact-info,
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .contact-icon {
+        margin-right: 12px;
+    }
+    
+    .submit-btn {
+        padding: 12px 20px;
+    }
+}

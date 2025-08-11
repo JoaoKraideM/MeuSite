@@ -52,3 +52,178 @@
     margin-bottom: 20px;
     line-height: 1.8;
 }
+
+/* Telas grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    .hero-text {
+        text-align: left;
+    }
+}
+
+/* Tablets e pequenos desktops (768px - 1199px) */
+@media (max-width: 1199px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-image {
+        flex: 0 0 350px;
+        width: 350px;
+        height: 350px;
+    }
+    
+    .hero-image img {
+        padding-right: 0;
+    }
+    
+    .skills-grid2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .hero-text h2 {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .nav-links li {
+        margin-left: 20px;
+    }
+    
+    .header-container {
+        padding: 0 20px;
+    }
+}
+
+/* Telefones grandes (576px - 767px) */
+@media (max-width: 767px) {
+    .hero {
+        padding: 100px 20px 40px;
+    }
+    
+    .hero-image {
+        flex: 0 0 280px;
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .hero-text p {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-title::after,
+    .experiencie-section .section-title::after {
+        width: 80%;
+        left: 10%;
+    }
+    
+    .skills-grid2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-card {
+        width: 200px;
+        height: 200px;
+    }
+    
+    nav {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Telefones pequenos (até 575px) */
+@media (max-width: 575px) {
+    .hero {
+        padding: 80px 15px 30px;
+    }
+    
+    .hero-image {
+        flex: 0 0 220px;
+        width: 220px;
+        height: 220px;
+    }
+    
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .hero-text h2 {
+        font-size: 18px;
+    }
+    
+    .btn, .download-btn {
+        padding: 10px 20px;
+        min-width: 160px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .about-text h2 {
+        font-size: 28px;
+    }
+    
+    .about-content {
+        gap: 30px;
+    }
+    
+    .experiencie-details {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-links a i {
+        font-size: 20px;
+    }
+}
