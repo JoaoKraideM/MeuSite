@@ -70,3 +70,18 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(renderGraph)
         .catch(() => renderGraph(generateSimulatedData()));
 }); 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    
+    // Efeito de scroll no header
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+});

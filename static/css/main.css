@@ -21,60 +21,59 @@ h1, h2, h3, h4 {
 
 /* Hero */
 .hero {
-  background-color: var(--fundo);
-  color: var(--cinza);
-  padding: 80px 40px;
-  padding-top: 5%;
-
+    background-color: var(--fundo);
+    color: var(--cinza);
+    padding: 80px 40px;
+    padding-top: 5%;
 }
 
 .hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .hero-image {
-  position: relative;
-  flex: 0 0 400px;
-  width: 500px;
-  height: 400px;
+    position: relative;
+    flex: 0 0 400px;
+    width: 500px;
+    height: 400px;
 }
 
 .hero-image img {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  padding-right: 80px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 80px;
 }
 
 .hero-text {
-  flex: 1;
-  min-width: 250px;
-  text-align: center;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
 }
 
 .hero-text h1 {
-  font-size: 48px;
-  margin: 0;
-  font-weight: 700;
+    font-size: 48px;
+    margin: 0;
+    font-weight: 700;
 }
 
 .hero-text h2 {
-  font-size: 24px;
-  font-weight: 400;
-  margin: 10px 0 20px;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0 20px;
 }
 
 .hero-text p {
-  font-size: 18px;
-  line-height: 1.6; 
+    font-size: 18px;
+    line-height: 1.6; 
 }
 
 .btn {
@@ -96,6 +95,7 @@ h1, h2, h3, h4 {
     background-color: var(--fundo);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
+
 /* EXPERIÊNCIA PROFISSIONAL */
 .experiencie-section {
     padding: 100px 0;
@@ -124,27 +124,29 @@ h1, h2, h3, h4 {
 }
 
 .experiencie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
 
 .experiencie-card {
-  background-color: var(--cinza);
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s;
+    background-color: var(--cinza);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
 }
 
 .experiencie-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(231,110,60,0.4);
     background-color: var(--fundo);
+}
 
-    h3, p , span{
-        color: var(--cinza);
-    }
+.experiencie-card:hover h3,
+.experiencie-card:hover p,
+.experiencie-card:hover span {
+    color: var(--cinza);
 }
 
 .experiencie-card h3 {
@@ -188,7 +190,7 @@ h1, h2, h3, h4 {
     user-select: none;
 }
 
-/* Adicione isso ao seu arquivo contacts.css ou main.css */
+/* Download Section */
 .download-section {
     text-align: center;
     padding: 40px 0;
@@ -258,10 +260,10 @@ h1, h2, h3, h4 {
     gap: 30px;
 }
 .skills-grid2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 2rem; 
-  justify-items: center; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; 
+    justify-items: center; 
 }
 .skill-card {
     background-color: var(--cinza);
@@ -420,16 +422,17 @@ nav {
 /* Footer */
 footer {
     background-color: var(--fundo);
-    color: var(--cinza-claro);
+    color: var(--cinza);
     text-align: center;
     padding: 30px 0 20px;
 }
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
 .social-links a {
-    background-color: var(--fundo);
-    color: var(--cinza-claro);
-    margin: 0 15px;
-    font-size: 22px;
-    transition: all 0.3s ease;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -438,6 +441,7 @@ footer {
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     border: 2px solid var(--cinza);
+    transition: all 0.3s ease;
 }
 .social-links a i {
     color: var(--cinza);
@@ -452,52 +456,179 @@ footer {
     color: var(--fundo);
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .hero {
-        padding: 80px 0 40px;
-        text-align: center;
+/* ==================== RESPONSIVIDADE ==================== */
+
+/* Telas grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    .hero-text {
+        text-align: left;
     }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-content p {
-        font-size: 18px;
-    }
-
-    .hero img {
-        max-width: 200px;
-    }
-    .experiencie-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .download-curriculo a, 
-    .download-curriculo-ingles a {
-        font-size: 1.1rem;
-        padding: 12px 32px;
-    }
-
-      .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image,
-  .hero-image::before {
-    width: 200px;
-    height: 200px;
-  }
-
-  .hero-text h1 {
-    font-size: 32px;
-  }
-
-  .hero-text h2 {
-    font-size: 20px;
-  }
 }
 
+/* Tablets e pequenos desktops (768px - 1199px) */
+@media (max-width: 1199px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-image {
+        flex: 0 0 350px;
+        width: 350px;
+        height: 350px;
+    }
+    
+    .hero-image img {
+        padding-right: 0;
+    }
+    
+    .skills-grid2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .hero-text h2 {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .nav-links li {
+        margin-left: 20px;
+    }
+    
+    .header-container {
+        padding: 0 20px;
+    }
+}
+
+/* Telefones grandes (576px - 767px) */
+@media (max-width: 767px) {
+    .hero {
+        padding: 100px 20px 40px;
+    }
+    
+    .hero-image {
+        flex: 0 0 280px;
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .hero-text p {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-title::after,
+    .experiencie-section .section-title::after {
+        width: 80%;
+        left: 10%;
+    }
+    
+    .skills-grid2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-card {
+        width: 200px;
+        height: 200px;
+    }
+    
+    nav {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Telefones pequenos (até 575px) */
+@media (max-width: 575px) {
+    .hero {
+        padding: 80px 15px 30px;
+    }
+    
+    .hero-image {
+        flex: 0 0 220px;
+        width: 220px;
+        height: 220px;
+    }
+    
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .hero-text h2 {
+        font-size: 18px;
+    }
+    
+    .btn, .download-btn {
+        padding: 10px 20px;
+        min-width: 160px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .about-text h2 {
+        font-size: 28px;
+    }
+    
+    .about-content {
+        gap: 30px;
+    }
+    
+    .experiencie-details {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-links a i {
+        font-size: 20px;
+    }
+}
