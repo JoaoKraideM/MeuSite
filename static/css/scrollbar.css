@@ -19,3 +19,27 @@ body {
     scrollbar-width: thin;
     scrollbar-color: var(--destaque-laranja) var(--fundo);
 }
+
+@media (max-width: 768px) {
+    /* Scrollbar mais fina em dispositivos móveis */
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    
+    html {
+        scrollbar-width: thin;
+    }
+}
+
+/* Melhorias para dark mode (opcional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cinza: #e4e2dd;
+        --fundo: #343534;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border: 2px solid var(--cinza);
+    }
+}

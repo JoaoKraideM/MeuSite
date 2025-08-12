@@ -142,20 +142,6 @@
     border: 2px solid var(--destaque-laranja);
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .contact-info,
-    .contact-form {
-        width: 100%;
-    }
-}
-/* Responsividade */
-/* Responsividade */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;

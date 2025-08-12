@@ -54,6 +54,7 @@
 }
 
 
+/* Telas grandes (acima de 1200px) */
 @media (min-width: 1200px) {
     .hero-text {
         text-align: left;

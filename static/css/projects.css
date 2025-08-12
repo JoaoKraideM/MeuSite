@@ -131,3 +131,115 @@
         .project-links a i {
             font-size: 18px;
         }
+
+        /* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .projects-section {
+        padding: 90px 0 50px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 3.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    
+    .project-image {
+        height: 220px;
+    }
+}
+
+/* Desktops médios (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .projects-section {
+        padding: 100px 0 60px;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .projects-grid {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktops grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    .projects-section {
+        padding: 120px 0 80px;
+    }
+    
+    .section-title {
+        font-size: 2.8rem;
+        margin-bottom: 4rem;
+    }
+    
+    .section-title::after {
+        width: 120px;
+        height: 4px;
+    }
+    
+    .projects-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 40px;
+    }
+    
+    .project-image {
+        height: 250px;
+    }
+    
+    .project-content {
+        padding: 30px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Dispositivos pequenos (abaixo de 576px) */
+@media (max-width: 575px) {
+    .projects-section {
+        padding: 60px 0 30px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .section-title::after {
+        width: 60px;
+        height: 2px;
+        bottom: -10px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .project-image {
+        height: 180px;
+    }
+    
+    .project-content {
+        padding: 18px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-links a {
+        font-size: 0.85rem;
+    }
+}
