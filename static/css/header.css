@@ -77,17 +77,6 @@ nav {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        padding: 0 10px;
-    }
-    .nav-links li {
-        margin-left: 15px;
-    }
-    .logo img {
-        width: 40px;
-    }
-}
 /* Responsividade */
 @media (max-width: 768px) {
     header {
