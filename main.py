@@ -23,6 +23,3 @@ socketio = SocketIO(app)
 # Import routes after app is created to avoid circular imports
 from views import *
 
-# Inicia o servidor
-if __name__ == '__main__':
-    socketio.run(app, debug=True, host='0.0.0.0', port=5000)
