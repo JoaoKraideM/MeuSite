@@ -146,35 +146,56 @@
     .contact-container {
         flex-direction: column;
         gap: 30px;
+        padding: 0 20px; /* um pouco de padding nas laterais */
     }
 
     .contact-info,
     .contact-form {
         width: 100%;
         max-width: 100%;
+        padding: 0; /* remove padding se existir */
     }
-    
+
+    /* Para dar mais espaço entre os itens no mobile */
     .contact-item {
         margin-bottom: 20px;
+        flex-direction: row;
+        align-items: center; /* ícones e texto alinhados verticalmente */
+    }
+
+    .contact-icon {
+        font-size: 28px;
+        margin-right: 15px;
+        margin-top: 0; /* remove top margin para alinhamento melhor */
     }
 }
 
-/* Ajustes para telas muito pequenas */
 @media (max-width: 480px) {
     .contact-container {
         padding: 0 15px;
     }
-    
+
     .contact-info,
     .contact-form {
-        padding: 20px;
+        padding: 15px 10px;
     }
-    
+
     .contact-icon {
-        margin-right: 12px;
+        font-size: 24px;
+        margin-right: 10px;
     }
-    
+
+    .contact-text h3 {
+        font-size: 18px;
+    }
+
+    .contact-text p,
+    .contact-text a {
+        font-size: 14px;
+    }
+
     .submit-btn {
         padding: 12px 20px;
+        font-size: 14px;
     }
 }
