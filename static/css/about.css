@@ -1,6 +1,6 @@
 :root {
     --cinza: #343534;
-    --destaque-laranja: #e76e3c;
+    --destaque-vermelho: #d40303;
     --fundo: #e4e2dd;
 }
 
@@ -44,7 +44,7 @@
     position: absolute;
     width: 80px;
     height: 4px;
-    background: linear-gradient(to right, var(--cinza), var(--destaque-laranja));
+    background: linear-gradient(to right, var(--cinza), var(--destaque-vermelho));
     bottom: -10px;
     left: 0;
 }

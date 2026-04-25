@@ -1,6 +1,6 @@
 :root {
     --cinza: #343534;
-    --destaque-laranja: #e76e3c;
+    --destaque-vermelho: #d40303;
     --fundo: #e4e2dd;
 }
 
@@ -79,19 +79,19 @@ h1, h2, h3, h4 {
 
 .btn {
     display: inline-block;
-    background-color: var(--destaque-laranja);
+    background-color: var(--destaque-vermelho);
     color: var(--fundo);
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
-    border: 2px solid var(--destaque-laranja);
+    border: 2px solid var(--destaque-vermelho);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .btn:hover {
     background-color: transparent;
-    color: var(--destaque-laranja);
+    color: var(--destaque-vermelho);
     transform: translateY(-3px);
     background-color: var(--fundo);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
@@ -116,7 +116,7 @@ h1, h2, h3, h4 {
     position: absolute;
     width: 60%;          
     height: 3px;
-    background: linear-gradient(to right, var(--cinza), var(--destaque-laranja));
+    background: linear-gradient(to right, var(--cinza), var(--destaque-vermelho));
     bottom: -12px;       
     left: 50%;           
     transform: translateX(-50%);
@@ -179,7 +179,7 @@ h1, h2, h3, h4 {
 }
 
 .tech-tag {
-    background-color: var(--destaque-laranja);
+    background-color: var(--destaque-vermelho);
     color: var(--fundo);
     padding: 6px 14px;
     border-radius: 20px;
@@ -208,21 +208,21 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     padding: 12px 25px;
-    background-color: var(--destaque-laranja);
+    background-color: var(--destaque-vermelho);
     color: var(--fundo);
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
     font-size: 16px;
     transition: all 0.3s ease;
-    border: 2px solid var(--destaque-laranja);
+    border: 2px solid var(--destaque-vermelho);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 180px;
 }
 
 .download-btn:hover {
     background-color: transparent;
-    color: var(--destaque-laranja);
+    color: var(--destaque-vermelho);
     transform: translateY(-3px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
@@ -248,7 +248,7 @@ h1, h2, h3, h4 {
     position: absolute;
     width: 60%;
     height: 3px;
-    background: linear-gradient(to right, var(--cinza), var(--destaque-laranja));
+    background: linear-gradient(to right, var(--cinza), var(--destaque-vermelho));
     bottom: -10px;
     left: 20%;
 }
@@ -288,7 +288,7 @@ h1, h2, h3, h4 {
     transition: all 0.3s ease;
 }
 .skill-card:hover i {
-    color: var(--destaque-laranja);
+    color: var(--destaque-vermelho);
     transform: scale(1.1);
 }
 .skill-card h3,
@@ -351,7 +351,7 @@ h1, h2, h3, h4 {
     position: absolute;
     width: 80px;
     height: 4px;
-    background: linear-gradient(to right, var(--cinza), var(--destaque-laranja));
+    background: linear-gradient(to right, var(--cinza), var(--destaque-vermelho));
     bottom: -10px;
     left: 0;
 }
@@ -401,7 +401,7 @@ nav {
     position: relative;
 }
 .nav-links a:hover {
-    color: var(--destaque-laranja);
+    color: var(--destaque-vermelho);
 }
 .nav-links a::after {
     content: '';
@@ -410,7 +410,7 @@ nav {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--destaque-laranja);
+    background-color: var(--destaque-vermelho);
     transition: width 0.3s ease;
 }
 .nav-links a:hover::after {
@@ -445,8 +445,8 @@ footer {
     transition: color 0.3s;
 }
 .social-links a:hover {
-    background-color: var(--destaque-laranja);
-    border-color: var(--destaque-laranja);
+    background-color: var(--destaque-vermelho);
+    border-color: var(--destaque-vermelho);
 }
 .social-links a:hover i {
     color: var(--fundo);

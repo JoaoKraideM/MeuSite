@@ -13,7 +13,7 @@
 }
         :root {
         --cinza: #343534;
-        --destaque-laranja: #e76e3c;
+        --destaque-vermelho: #d40303;
         --fundo: #e4e2dd;
         }
         .projects-section {
@@ -33,7 +33,7 @@
             position: absolute;
             width: 100px;
             height: 4px;
-            background: linear-gradient(to right, var(--cinza), var(--destaque-laranja));
+            background: linear-gradient(to right, var(--cinza), var(--destaque-vermelho));
             bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
@@ -99,7 +99,7 @@
         }
         
         .tech-tag {
-            background-color: var(--destaque-laranja);
+            background-color: var(--destaque-vermelho);
             color: white;
             padding: 6px 12px;
             border-radius: 20px;
@@ -124,7 +124,7 @@
         }
         
         .project-links a:hover {
-            color: var(--destaque-laranja);
+            color: var(--destaque-vermelho);
             transform: translateX(5px);
         }
         

@@ -23,3 +23,6 @@ socketio = SocketIO(app)
 # Import routes after app is created to avoid circular imports
 from views import *
 
+
+if __name__ == "__main__":
+    socketio.run(app, debug=True)
