@@ -1,6 +1,5 @@
 #Imports
 from datetime import datetime, timedelta
-from main import *
 from flask import flash, redirect, request, render_template
 import os
 import smtplib
@@ -8,6 +7,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 import requests
+from main import app
+from flask import jsonify
+from app import app
 
 #variavel do env
 load_dotenv()  
